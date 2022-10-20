@@ -1,7 +1,6 @@
 //display current time and date for scheduler using moment.js */
-var now = moment();
 
-$("#currentDay").text(moment.now().format("MMM d, YYYY"));
+$("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
 //When the description box is clicked it is color coded to green for past, red for present and light grey for future.
 const rows = document.getElementsByClassName("row");
@@ -28,9 +27,17 @@ Array.from(rows).forEach(row => {
     }
 });
 
+$(".saveBtn").click(function(){
+    console.log($(this))
+    var time = $(this).parent().attr("id")
+    console.log (time)
+    var text = $(this).siblings("textarea").val()
+    console.log (text)
+    localStorage.setItem(time, text);
+  });
+
 function setColor(element, color) {
     element.style.backgroundColor = color;
 }
 
 //save to local storage
-localStorage.setItem("time,value");
