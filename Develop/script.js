@@ -38,6 +38,7 @@ $(".saveBtn").click(function(){
 
 function setColor(element, color) {
     element.style.backgroundColor = color;
+      
 }
 
 //save to local storage
