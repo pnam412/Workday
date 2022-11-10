@@ -10,6 +10,8 @@ The calendar shows time and date for each tasks.
 
 I learned how to create a calendar with hours of the day and to create event listeners for each task to be saved.
 
+Each task is then saved to local storage.
+
 ## Table of Contents 
 
 - [Installation](#installation)
